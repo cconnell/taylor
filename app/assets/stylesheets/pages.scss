@@ -1,3 +1,20 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.intro h1 {
+    color: white;
+}
+
+.intro {
+    background-image: image-url('intro-norbert-levajsics-190893-min');
+}
+
+.work p {
+    padding-left: 15px;
+}
+
+.random p {
+    padding-left: 15px;
+}

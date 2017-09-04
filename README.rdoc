@@ -26,3 +26,7 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+Theme css settings overwritten with css settings in app/assets/stylesheets/pages.scss
+To faciliate potential theme updates, NOTHING CHANGED IN vendor/assets/stylesheets/style.default.css
