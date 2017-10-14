@@ -8,13 +8,33 @@
 }
 
 .intro {
-    background-image: image-url('intro-norbert-levajsics-190893-min');
+    background-image: image-url('intro-norbert-levajsics-190893-min.jpg');
 }
 
+#work {
+    color: #ffffff;
+    background-color: #343f71;
+    .heading {
+        color: #ffffff;
+    }
+    .heading:after {
+            background: #ffffff;
+    }
+    a {
+        color: #ffffff;
+    }
+}
+
+#random {
+    background-color: #343f71;
+}
+
+.random p,
 .work p {
     padding-left: 15px;
 }
 
-.random p {
-    padding-left: 15px;
+.random a {
+    color: #ffffff;
 }
+
