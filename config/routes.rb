@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   
   post '/messages' => 'messages#create'
   
+  get '/blog' => 'blogs#index'
 end
