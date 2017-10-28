@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
     def index
-      @blogs = Blog.all.order({ created_at: :desc })
+      @blogs = Blog.limit(3).order({ created_at: :desc })
     end
 end
