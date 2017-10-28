@@ -17,6 +17,6 @@
 //= require ekko-lightbox
 //= require jquery.sticky
 //= require jquery.scrollTo.min
+//= require summernote
 //= require front
-//= require turbolinks
 //= require_tree .

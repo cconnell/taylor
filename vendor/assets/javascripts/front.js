@@ -87,9 +87,9 @@ function utils() {
         window.location.href = "/blog";        
          } else {
             var parts = full_url.split("#");
-             var trgt = parts[1];
-  
-             $('body').scrollTo($('#' + trgt), 800, {offset: -40});
+            var trgt = parts[1];
+            console.log(trgt);
+            $('body').scrollTo($('#' + trgt), 800, {offset: -40});
          }
     });
 
