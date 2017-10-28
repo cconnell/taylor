@@ -1,0 +1,34 @@
+<%= form_for(:message, url: "/blog", method: :post) do |f| %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 create-blog">
+            <h1>Create a new blog post</h1>
+            <div class="controls">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="name">Post Title</label>
+                        <%= f.text_field :first_name, class: "form-control", placeholder: "Enter post title" %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <%= check_box_tag(:featured) %>
+                        <%= label_tag(:featured, "Featured Post") %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="surname">Post</label>
+                        <%= f.text_area :message, class: "form-control", placeholder: "Enter post content" %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center">
+                        <%= f.submit "Publish Post", class: "btn btn-primary btn-block" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% end %>
