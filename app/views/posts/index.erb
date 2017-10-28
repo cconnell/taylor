@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-md-12">
+        <h1>blog index</h1>
+        <% if @featured_post %>
+        <div class="row">
+            <a href="blog/<%= @featured_post.id %>"><h2 class="heading">Featured Post: <%= @featured_post.title %></h2></a>
+        </div>
+        <div class="row">
+            <p><%= @featured_post.content %></p>
+        </div>
+        <% end %>
+        
+        <% @posts.each do |post| %>
+        <div class="row">
+            <a href=<%= post.id %>><h2 class="heading"><%= post.title %></h2></a>
+            <p><%= post.title %></p>
+        </div>
+        <% end %>
+     
+    </div>
+    <%= will_paginate @posts %>
+</div>
+
+
+

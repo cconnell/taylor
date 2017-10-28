@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 20171028152023) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
-  create_table "blogs", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.date     "date"
-    t.boolean  "featured"
+    t.boolean  "featured",   default: false
     t.string   "title"
-    t.text     "post"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "content"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end
