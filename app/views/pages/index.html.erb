@@ -122,7 +122,7 @@
                 <% @posts.each do |post| %>
                   <div class="blog-preview">
                     <a href="/blog/<%= post.id %>"><p class="lead"><%= post.title %></p>
-                    <p><%= post.content.truncate_words(75, omission: "... (continued)") %></p></a>
+                    <p><%= sanitize post.content.truncate_words(75, omission: "... (continued)") %></p></a>
                   </div>
                 <% end %>
             </div>

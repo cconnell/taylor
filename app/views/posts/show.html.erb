@@ -1,3 +1,10 @@
-<%= @post.title %>
-<%= @post.created_at %>
-<%= @post.content %>
+<section id="about" class="text">
+    <div class="container">
+      <div class="row">
+          <h2 class="heading"><%= @post.title %></h2>
+          <p>Taylor Dorsett</p>
+          <p>Published <%= @post.date %></p>
+          <p><%= sanitize @post.content %></p>
+      </div>
+    </div>
+</section>

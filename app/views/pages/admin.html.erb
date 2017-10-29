@@ -1,0 +1,33 @@
+<div class="container top-margin">
+  <h1>admin panel</h1>
+  <div class="admin-buttons">
+    <a href="/blog/new"><button class="btn btn-primary">New Post</button></a>
+    <%= link_to "Sign Out", "/admins/sign_out", method: :delete, class: "btn btn-primary" %>
+  </div> 
+  <table class="table table-bordered table-hover table-responsive">
+    <tr>
+      <th>TITLE</th>
+      <th>DATE</th>
+      <th>FEATURED</th>
+      <th></th>
+    </tr>
+    <% @posts.each do |post| %>
+      <tr>
+        <td>
+          <a href="blog/<%= post.id %>/edit"><%= post.title %></a>
+        </td>
+        <td>
+          <%= post.date %>
+        </td>
+        <% if post.featured == true %>
+          <td id="panel-featured"><%= post.featured.to_s.upcase %></td>
+        <% else %>
+          <td><%= post.featured.to_s.upcase %></td>
+        <% end %>
+        <td>
+          <%= link_to "Destroy", "/blog/#{post.id}", method: :delete, :data => {:confirm => 'Are you sure? Deleted posts cannot recoved.'}, class: "btn btn-primary" %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</container>
