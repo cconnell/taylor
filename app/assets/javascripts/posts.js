@@ -1,3 +1,5 @@
 $(document).ready(function() {
-  $('#post-editor').summernote();
+  $('#post-editor').summernote({
+    height: 300
+  });
 });

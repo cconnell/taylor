@@ -1,8 +1,8 @@
-<%= form_for(:post, url: "/blog", method: :post) do |f| %>
+<%= form_for(:post, url: "/blog/#{@post.id}", method: :patch) do |f| %>
 <div class="container top-margin">
     <div class="row">
         <div class="col-md-12 create-blog">
-            <h1>Create a new blog post</h1>
+            <h1>Edit post</h1>
             <div class="controls">
                 <div class="row">
                     <div class="form-group">
@@ -22,8 +22,8 @@
                     </div>
                 </div>
                 
-                  <%= f.hidden_field :date, value: Time.now %>
-
+                    <%= f.hidden_field :date %>
+                    <%= hidden_field_tag 'selected', 'none'  %>
         
                 <div class="row">
                     <div class="text-center">

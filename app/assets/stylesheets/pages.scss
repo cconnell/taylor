@@ -44,12 +44,42 @@
     }
 }
 
-.blog-preview a:hover {
+.blog-preview {
+    a:hover {
     text-decoration: none;
+    }
+    img {
+    display: none;
+    }
+}
+
+.pagination {
+    margin-top: 40px;
 }
 
 .create-blog {
     h1 {
         margin-left: -15px;
     }
+}
+
+.admin-buttons {
+    padding-bottom: 20px;
+    button {
+        width: 100px;
+    }
+}
+
+#panel-featured {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.top-margin {
+    margin-top: 75px;
+}
+
+#post-editor {
+    min-height: 300px;
 }
