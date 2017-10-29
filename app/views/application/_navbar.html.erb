@@ -23,30 +23,3 @@
     </div>
 </header>
 <!-- /.navbar-->
-<div class="container top-margin">
-    <div class="col-md-12">
-        <% if @featured_post %>
-        <div class="row">
-            <a href="/blog/<%= @featured_post.slug %>"><h2 class="heading"><%= @featured_post.title %></h2></a>
-        </div>
-        <div class="row">
-            <p><%= sanitize @featured_post.content %></p>
-        </div>
-        <% end %>
-        
-        <% @posts.each do |post| %>
-            <div class="row">
-                <% if post.featured != true %>
-                    <a href="/blog/<%= post.slug %>"><h2 class="heading"><%= post.title %></h2></a>
-                    <p><%= post.title %></p>
-                    <p><%= sanitize post.content %></p>
-                <% end %>
-            </div>
-        <% end %>
-     
-    </div>
-    <%= will_paginate @posts %>
-</div>
-
-
-

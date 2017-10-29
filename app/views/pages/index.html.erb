@@ -121,7 +121,7 @@
               <h2 class="heading"><a href="/blog/">Blog</a></h2>
                 <% @posts.each do |post| %>
                   <div class="blog-preview">
-                    <a href="/blog/<%= post.id %>"><p class="lead"><%= post.title %></p>
+                    <a href="/blog/<%= post.slug %>"><p class="lead"><%= post.title %></p>
                     <p><%= sanitize post.content.truncate_words(75, omission: "... (continued)") %></p></a>
                   </div>
                 <% end %>
