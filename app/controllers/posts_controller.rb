@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :authenticate_admin!, except: [:index, :show]
+    before_action :verify_admin, except: [:index, :show]
 
     def index
         @featured_post = Post.friendly.find_by(featured: true)
@@ -55,6 +55,12 @@ class PostsController < ApplicationController
     
         def post_params
             params.require(:post).permit(:title, :content, :featured, :date)
+        end
+        
+        def verify_admin
+            unless current_admin
+              redirect_to '/blog'
+            end
         end
         
 
