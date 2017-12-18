@@ -58,6 +58,10 @@ GEM
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
+    exception_handler (0.7.7.0)
+      bundler
+      rails (>= 4.2.0)
+      responders
     execjs (2.7.0)
     ffi (1.9.18)
     friendly_id (5.1.0)
@@ -168,6 +172,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  exception_handler (~> 0.7.7.0)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.0)
   jquery-rails
