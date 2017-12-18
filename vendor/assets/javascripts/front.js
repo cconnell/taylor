@@ -80,16 +80,20 @@ function utils() {
 
     /* animated scrolling */
 
-    $('.scroll-to, #navigation a').click(function (event) {
+    $('.scroll-to, .index-navigation a').click(function (event) {
         event.preventDefault();
         var full_url = this.href;
         if(full_url.includes("blog")) {
-            window.location.href = "/blog";        
+            window.location.href = "/blog";
+         } else if(full_url.includes("admin")) {
+            window.location.href = "/admin";
          } else {
             var parts = full_url.split("#");
             var trgt = parts[1];
             console.log(trgt);
-            $('body').scrollTo($('#' + trgt), 800, {offset: -40});
+            // $('body').scrollTo($('#' + trgt), 800, {offset: -40});
+            // below works to scroll to links on home page only, does not work to get away from blog page
+            $('html,body').animate({scrollTop: $('#' + trgt).offset().top},'slow');
          }
     });
 

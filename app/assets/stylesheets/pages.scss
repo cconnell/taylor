@@ -34,6 +34,11 @@
     padding-left: 15px;
 }
 
+.random button,
+.work button {
+    margin-left: 15px;
+}
+
 .random a {
     color: #ffffff;
 }
@@ -65,15 +70,11 @@
 
 .admin-buttons {
     padding-bottom: 20px;
-    button {
-        width: 100px;
-    }
 }
 
 #panel-featured {
-    color: red;
+    color: #343f71;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .top-margin {
@@ -82,4 +83,17 @@
 
 #post-editor {
     min-height: 300px;
+}
+
+.btn-edit {
+    background-color: #f14c4c;
+    a {
+        text-decoration: none;
+    }
+}
+
+.admin-li a {
+    color: #343f71 !important;
+    font-style:normal;
+    font-weight:600;
 }

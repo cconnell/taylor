@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-    validates :title, :content, :date, presence: true
+    validates :title, :content, presence: true
     validates :title, uniqueness: true
     
     extend FriendlyId

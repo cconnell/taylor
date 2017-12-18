@@ -1,0 +1,26 @@
+<%= render 'navbar' %>
+
+<%= form_for(:landing_page_content, url: "/edit/#{@landing_page_content.id}", method: :patch) do |f| %>
+<div class="container top-margin">
+    <div class="row">
+        <div class="col-md-12 create-blog">
+            <h1>Edit Landing Page Content</h1>
+            <p>Current Content:</p>
+            <p><%= sanitize @landing_page_content.content %></p>
+            <div class="controls">
+                <div class="row">
+                    <div class="form-group">
+                        <%= f.text_area :content, id: "post-editor"%>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="text-center">
+                        <%= f.submit "Save Changes", class: "btn btn-primary btn-block", data: { confirm: 'Are you sure? Content changes are immediatly published and cannot be undone.' }%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% end %>

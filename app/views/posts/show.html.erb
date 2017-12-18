@@ -3,10 +3,17 @@
 <section id="about" class="text">
     <div class="container">
       <div class="row">
+        <% if current_admin %>
+          <a href="/blog/<%= @post.id %>/edit"><h2 class="heading"><%= @post.title %></h2></a>
+        <% else %>
           <h2 class="heading"><%= @post.title %></h2>
-          <p>Taylor Dorsett</p>
-          <p>Published <%= @post.date %></p>
+        <% end %>
+        <div id="blog-post-details">
+          <%= image_tag "taylor-blog.png" %>
+          <p style="display:inline">Taylor Dorsett</p>
+          <p>Published <%= @post.created_at.strftime("%m.%d.%y") %></p>
           <p><%= sanitize @post.content %></p>
+        </div>
       </div>
     </div>
 </section>

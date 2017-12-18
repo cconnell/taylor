@@ -15,7 +15,3 @@
 /log/*
 !/log/.keep
 /tmp
-
-
-/.c9
-.DS_STORE

@@ -1,14 +1,37 @@
+<%= render 'navbar' %>
+
 <div class="container top-margin">
   <h1>admin panel</h1>
   <div class="admin-buttons">
     <a href="/blog/new"><button class="btn btn-primary">New Post</button></a>
+    <a href="/edit"><button class="btn btn-primary">Edit Landing Page</button></a>
     <%= link_to "Sign Out", "/admins/sign_out", method: :delete, class: "btn btn-primary" %>
   </div> 
+  <% if @featured_post %>
   <table class="table table-bordered table-hover table-responsive">
     <tr>
-      <th>TITLE</th>
+      <th>FEATURED POST</th>
       <th>DATE</th>
-      <th>FEATURED</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>
+        <a href="blog/<%= @featured_post.id %>/edit"><%= @featured_post.title %></a>
+      </td>
+      <td>
+        <%= @featured_post.created_at %>
+      </td>
+      <td>
+        <%= link_to "Destroy", "/blog/#{@featured_post.id}", method: :delete, :data => {:confirm => 'Are you sure? Deleted posts cannot recoved.'}, class: "btn btn-primary" %>
+      </td>
+    </tr>
+  </table>
+      <% end %>
+      <% if @posts %>
+  <table class="table table-bordered table-hover table-responsive">
+    <tr>
+      <th>POST</th>
+      <th>DATE</th>
       <th></th>
     </tr>
     <% @posts.each do |post| %>
@@ -17,17 +40,13 @@
           <a href="blog/<%= post.id %>/edit"><%= post.title %></a>
         </td>
         <td>
-          <%= post.date %>
+          <%= post.created_at %>
         </td>
-        <% if post.featured == true %>
-          <td id="panel-featured"><%= post.featured.to_s.upcase %></td>
-        <% else %>
-          <td><%= post.featured.to_s.upcase %></td>
-        <% end %>
         <td>
           <%= link_to "Destroy", "/blog/#{post.id}", method: :delete, :data => {:confirm => 'Are you sure? Deleted posts cannot recoved.'}, class: "btn btn-primary" %>
         </td>
       </tr>
     <% end %>
   </table>
+  <% end %>
 </container>
