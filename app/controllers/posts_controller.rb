@@ -8,8 +8,11 @@ class PostsController < ApplicationController
     
     def show
         @post = Post.friendly.find(params[:id])
+        
+        rescue ActiveRecord::RecordNotFound
+            redirect_to "/blog"
     end
-    
+
     def new
         @post = Post.new
     end
