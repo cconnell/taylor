@@ -120,6 +120,8 @@
             <div class="row">
               <div class="col-md-12">
                 <h2 class="heading"><a href="/blog/">Blog</a></h2>
+                  <div class="lead"><%= sanitize @landing_page_content[9].content %></div>
+                  <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[9].id }/edit" %></button>
                   <% @posts.each do |post| %>
                     <div class="blog-preview">
                       <a href="/blog/<%= post.slug %>"><p class="lead"><%= post.title %></p>
@@ -173,10 +175,10 @@
               </div>
             <% end %>
             <div class="col-md-6">
-              <p class="lead"><%= sanitize @landing_page_content[9].content %></p>
-              <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[9].id }/edit" %></button>
-              <p><%= sanitize @landing_page_content[10].content %></p>
+              <p class="lead"><%= sanitize @landing_page_content[10].content %></p>
               <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[10].id }/edit" %></button>
+              <p><%= sanitize @landing_page_content[11].content %></p>
+              <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[11].id }/edit" %></button>
               <p class="social"><a href="https://twitter.com/yodorsett" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/in/taylordorsett" title="" class="gplus"><i class="fa fa-linkedin"></i></a></p>
             </div>
           </div>

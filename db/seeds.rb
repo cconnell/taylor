@@ -12,6 +12,6 @@ Post.create(featured: false, title: "post 3", content: "post 1 content")
 Post.create(featured: false, title: "post 4", content: "post 1 content")
 Post.create(featured: false, title: "post 5", content: "post 1 content")
 
-11.times do
+12.times do
     LandingPageContent.create(content: "Placeholder")
 end
