@@ -6,7 +6,7 @@
       <div class="container clearfix">
         <div class="row">
           <h1><%= sanitize @landing_page_content[0].content %></h1>
-          <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[0].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[0].id %>/edit" class="btn btn-edit">Edit</a>
         </div>
       </div>
     </div>
@@ -47,9 +47,9 @@
         <div class="col-md-6">
           <h2 class="heading">About me</h2>
           <div class="lead"><%= sanitize @landing_page_content[1].content %></div>
-          <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[1].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[1].id %>/edit" class="btn btn-edit">Edit</a>
           <p><%= sanitize @landing_page_content[2].content %></p>
-          <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[2].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[2].id %>/edit" class="btn btn-edit">Edit</a>
         </div>
         <div class="col-md-5 col-md-offset-1">
           <p><%= image_tag "taylor-528-min.jpg", class:"img-responsive img-circle" %></p>
@@ -67,9 +67,9 @@
           <h2 class="heading">Work</h2>
           <div class="row work">
             <div class="lead"><%= sanitize @landing_page_content[3].content %></div>
-            <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[3].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[3].id %>/edit" class="btn btn-edit">Edit</a>
             <p><%= sanitize @landing_page_content[4].content %></p>
-            <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[4].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[4].id %>/edit" class="btn btn-edit">Edit</a>
           </div>
         </div>
       </div>
@@ -86,9 +86,9 @@
             <div class="col-md-12">
               <h2 class="heading">Art</h2>
                 <div class="lead"><%= sanitize @landing_page_content[5].content %></div>
-                <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[5].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[5].id %>/edit" class="btn btn-edit">Edit</a>
                 <p><%= sanitize @landing_page_content[6].content %></p>
-                <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[6].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[6].id %>/edit" class="btn btn-edit">Edit</a>
             </div>
           </div>
         </div>
@@ -104,9 +104,9 @@
           <h2 class="heading">Random</h2>
           <div class="row random">
             <div class="lead"><%= sanitize @landing_page_content[7].content %></div>
-            <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[7].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[7].id %>/edit" class="btn btn-edit">Edit</a>
             <p><%= sanitize @landing_page_content[8].content %></p>
-            <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[8].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[8].id %>/edit" class="btn btn-edit">Edit</a>
         </div>
       </div>
     </div>
@@ -121,7 +121,7 @@
               <div class="col-md-12">
                 <h2 class="heading"><a href="/blog/">Blog</a></h2>
                   <div class="lead"><%= sanitize @landing_page_content[9].content %></div>
-                  <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[9].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[9].id %>/edit" class="btn btn-edit">Edit</a>
                   <% @posts.each do |post| %>
                     <div class="blog-preview">
                       <a href="/blog/<%= post.slug %>"><p class="lead"><%= post.title %></p>
@@ -176,9 +176,9 @@
             <% end %>
             <div class="col-md-6">
               <p class="lead"><%= sanitize @landing_page_content[10].content %></p>
-              <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[10].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[10].id %>/edit" class="btn btn-edit">Edit</a>
               <p><%= sanitize @landing_page_content[11].content %></p>
-              <button class="btn btn-edit"><%= link_to "Edit", "edit/#{ @landing_page_content[11].id }/edit" %></button>
+            <a href="edit/<%= @landing_page_content[11].id %>/edit" class="btn btn-edit">Edit</a>
               <p class="social"><a href="https://twitter.com/yodorsett" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/in/taylordorsett" title="" class="gplus"><i class="fa fa-linkedin"></i></a></p>
             </div>
           </div>
