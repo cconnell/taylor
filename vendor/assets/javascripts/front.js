@@ -90,7 +90,6 @@ function utils() {
          } else {
             var parts = full_url.split("#");
             var trgt = parts[1];
-            console.log(trgt);
             // $('body').scrollTo($('#' + trgt), 800, {offset: -40});
             // below works to scroll to links on home page only, does not work to get away from blog page
             $('html,body').animate({scrollTop: $('#' + trgt).offset().top},'slow');

@@ -29,14 +29,14 @@
     background-color: #343f71;
 }
 
-.random p,
-.work p {
-    padding-left: 15px;
-}
-
-.random a,
-.work a {
-    margin-left: 15px;
+.random,
+.work {
+    p {
+        padding-left: 15px;
+    }
+    .btn {
+        margin-left: 15px;
+    }
 }
 
 .random a {
