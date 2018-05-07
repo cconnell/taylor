@@ -5,7 +5,7 @@ class MessageMailer < ApplicationMailer
     @first_name = first_name
     @last_name = last_name
     @sender = sender
-    @body = body
+    @message_body = body
     mail(to: "taylorsunwantedemails@gmail.com", subject: 'taylordorsett.com message')
   end
 end
